@@ -75,8 +75,8 @@ class Malice extends CodeceptionModule
 
     public function _initialize()
     {
-        /** @var CodeceptionModule\Symfony2 $module */
-        $module = $this->getModule('Symfony2');
+        /** @var CodeceptionModule\Symfony $module */
+        $module = $this->getModule('Symfony');
 
         /** @var \AppKernel $kernel */
         $this->kernel = $module->kernel;
@@ -161,7 +161,7 @@ class Malice extends CodeceptionModule
 
     public function getContainer()
     {
-        return $this->getModule('Symfony2')->kernel->getContainer();
+        return $this->getModule('Symfony')->kernel->getContainer();
     }
 
 }
